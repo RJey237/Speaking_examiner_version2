@@ -26,8 +26,9 @@ This project is a real-time, AI-powered mock IELTS speaking test simulator. It p
 
 - **AI Services:**
   - **Speech-to-Text (STT):** Deepgram (Nova-2 Model)
-  - **Language Model (LLM):** Google Gemini (Gemini-Pro Model)
+  - **Language Model (LLM):** Google Gemini (Gemini-2.5-flash Model)
   - **Text-to-Speech (TTS):** Cartesia AI
+  - **Voice activity detection (VAD):** snakers4/silero-vad
 
 ## Prerequisites
 
@@ -39,6 +40,7 @@ You will also need API keys from the following services:
 - **Google AI Studio** (for Gemini)
 - **Deepgram**
 - **Cartesia AI**
+- **Livekit**
 
 ## Setup and Installation
 
@@ -47,8 +49,8 @@ Follow these steps to get the application running locally.
 **1. Clone the Repository**
 
 ```bash
-git clone <your-repository-url>
-cd <your-repository-name>
+git clone <https://github.com/RJey237/Speaking_examiner_version2>
+cd <Speaking_examiner_version2>
 ```
 
 **2. Create the Environment File**
