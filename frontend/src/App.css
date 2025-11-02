@@ -1,0 +1,305 @@
+/* src/App.css */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+
+.header {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #1a237e;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f44336;
+  margin-right: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.status-indicator.connected {
+  background-color: #4caf50;
+}
+
+.transcript-container {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message {
+  padding: 10px 15px;
+  border-radius: 18px;
+  max-width: 80%;
+  line-height: 1.4;
+  word-wrap: break-word;
+}
+
+.message.ai {
+  background-color: #e8eaf6;
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.message.user {
+  background-color: #dcedc8;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.message strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 0.8rem;
+  color: #3f51b5;
+}
+
+.footer {
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #3f51b5;
+  color: white;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #303f9f;
+}
+
+button:disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+button.listening {
+  background-color: #4caf50;
+  cursor: default;
+}
+
+button.recording {
+  background-color: #d32f2f;
+  cursor: default;
+}
+
+.timer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.timer-display {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #3f51b5;
+  background-color: #e8eaf6;
+  padding: 8px 12px;
+  border-radius: 8px;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.timer-button {
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  background-color: #757575;
+}
+
+.timer-button:hover {
+  background-color: #616161;
+}
+
+/* --- NEW, IMPROVED EVALUATION REPORT STYLES --- */
+
+.evaluation-report {
+  padding: 25px;
+  overflow-y: auto;
+  flex-grow: 1;
+  background-color: #f8f9fa;
+}
+
+.evaluation-report h2 {
+  text-align: center;
+  color: #1a237e;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.overall-score-block {
+  text-align: center;
+  margin: 0 auto 30px auto;
+  padding: 20px;
+  background-color: #3f51b5;
+  color: white;
+  border-radius: 12px;
+  width: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overall-score-block h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.overall-score-block span {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sections-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.evaluation-section {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #e8eaf6;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.section-header h3 {
+  margin: 0;
+  color: #1a237e;
+  font-size: 1.2rem;
+}
+
+.score-badge {
+  background-color: #e8eaf6;
+  color: #3f51b5;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 1.1rem;
+}
+
+.feedback-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.strengths h4, .improvements h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.strengths {
+  color: #388e3c;
+}
+
+.improvements {
+  color: #d32f2f;
+}
+
+.strengths ul, .improvements ul {
+  padding-left: 20px;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.strengths li, .improvements li {
+  margin-bottom: 10px;
+}
+
+.strengths li::marker, .improvements li::marker {
+  font-weight: bold;
+}
+
+.strengths li strong, .improvements li strong {
+  color: #111;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.restart-button {
+  background-color: #4caf50; /* Green */
+  font-weight: bold;
+}
+
+.restart-button:hover {
+  background-color: #43a047; /* Darker Green */
+}
