@@ -14,8 +14,7 @@
 # Environment variables - VERY IMPORTANT
 # Never commit your secret API keys!
 .env
-.env.*
-!/.env.example
+
 
 # IDE / Editor specific files
 .vscode/
